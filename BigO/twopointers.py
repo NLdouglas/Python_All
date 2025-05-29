@@ -9,7 +9,7 @@ def twSum_ordenado(nums, target):
         if soma == target:
             return [left, right] # ou pode ser usado os valorres nums[left] e nums[right]
         
-        elif soma == target:
+        elif soma < target:
             right += 1 # precisa de uma soma maior.
         else:
             right -= 1 # precisa de uma soma meenor
