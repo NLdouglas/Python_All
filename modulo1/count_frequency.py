@@ -1,12 +1,19 @@
 def count_frequency(nums: list) -> dict:
     freq = {}
-
+    
     for n in nums:
-        # sua lógica aqui
-        pass
+        if n not in freq:
+              freq[n] = 0 # cria uma chave com o valor 0 no dicionario caso N nao esteja em freq          
+        freq[n] = freq[n] + 1
 
-    return freq
+    freq_two = {}
+    for n2 in nums:
+         freq_two[n2] = freq_two.get(n2, 0) + 1
 
+    return freq, freq_two
+
+    
+         
 
 # Testes
 print(count_frequency([1, 2, 2, 3, 3, 3]))   # {1: 1, 2: 2, 3: 3}
